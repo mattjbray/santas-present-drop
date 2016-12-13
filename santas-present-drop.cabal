@@ -1,0 +1,34 @@
+name:                santas-present-drop
+version:             0.1.0.0
+synopsis:            Initial project template from stack
+description:         Please see README.md
+homepage:            https://github.com/mattjbray/santas-present-drop#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2016 Author name here
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+executable santas-present-drop-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  other-modules:       Player
+                     , Position
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -Werror
+  build-depends:       aeson
+                     , base
+                     , bytestring
+                     , mtl
+                     , network
+                     , stm
+                     , text
+                     , websockets
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/mattjbray/santas-present-drop
